@@ -7,6 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -45,20 +48,419 @@
         <span class="tag">Video</span>
         <time datetime="2026-11-16">November 16, 2026</time>
       </div>
-      <h2 class="post-title">Waterbird Video Explainer</h2>
+      <h2 class="post-title">Waterbird Slider: Setup &amp; Operation</h2>
+      <p class="post-lede">
+        How to build, angle and run the Waterbird arc slider for a smooth two-shot interview, plus a fix for a reversed joystick.
+      </p>
 
       <div class="video-frame">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/qItLd-U4OY4?rel=0"
+        <iframe id="yt"
+          src="https://www.youtube.com/embed/qItLd-U4OY4?rel=0&amp;enablejsapi=1"
           title="Waterbird Video Explainer"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen></iframe>
       </div>
 
-      <p class="post-body">
-        A walkthrough of the Waterbird. A step-by-step guide and the full transcript are coming soon.
-      </p>
+      <nav class="chapters" aria-label="Video chapters">
+        <span class="chapters-label">Chapters</span>
+        <button class="ts" data-t="0">0:00 Intro</button>
+        <button class="ts" data-t="15">0:15 Parts list</button>
+        <button class="ts" data-t="53">0:53 Slider setup</button>
+        <button class="ts" data-t="114">1:54 Troubleshooting</button>
+        <button class="ts" data-t="134">2:14 Angle the track</button>
+        <button class="ts" data-t="241">4:01 Set in/out points</button>
+        <button class="ts" data-t="349">5:49 Manual mode</button>
+        <button class="ts" data-t="406">6:46 Live setup</button>
+      </nav>
+
+      <section class="guide">
+        <h3 class="section-title">Step-by-step guide</h3>
+
+        <h4 class="phase">1 &middot; Know the kit</h4>
+
+        <figure class="step">
+          <img src="images/waterbird/01-parts.jpg" alt="Waterbird slider kit laid out on the floor: curved track, two stands, controller and motor" loading="lazy">
+          <figcaption>
+            <span class="step-num">01</span>
+            <h5>What's in the case</h5>
+            <ul>
+              <li><strong>Arc track</strong>: the curve lets you cut almost any angle or hold a simple two-shot.</li>
+              <li><strong>Ball head</strong> for the camera, which mounts to the <strong>motor</strong>.</li>
+              <li><strong>Two stands.</strong> They're enough for now. Heavier-duty stands may come later.</li>
+              <li><strong>Remote controller</strong>, <strong>connecting cable</strong> and <strong>power supply</strong>.</li>
+            </ul>
+            <button class="ts" data-t="13">Watch at 0:13</button>
+          </figcaption>
+        </figure>
+
+        <figure class="step">
+          <img src="images/waterbird/02-controller.jpg" alt="Close-up of the Waterbird controller with dials, buttons and joystick" loading="lazy">
+          <figcaption>
+            <span class="step-num">02</span>
+            <h5>The controller</h5>
+            <p>The joystick moves the camera along the track by hand. The buttons store track positions. The dials set <strong>pause</strong>, <strong>speed</strong> and <strong>ramp</strong>, and you can change them while the slider is moving.</p>
+            <button class="ts" data-t="30">Watch at 0:30</button>
+          </figcaption>
+        </figure>
+
+        <h4 class="phase">2 &middot; Set up the slider</h4>
+
+        <figure class="step">
+          <img src="images/waterbird/03-brakes.jpg" alt="Hand flipping a brake lever on the slider track" loading="lazy">
+          <figcaption>
+            <span class="step-num">03</span>
+            <h5>Brakes off while it moves</h5>
+            <p>Lever <strong>down = locked</strong>. Lever <strong>up = unlocked</strong>. Keep the brakes off whenever the carriage is travelling, to protect the slider.</p>
+            <button class="ts" data-t="50">Watch at 0:50</button>
+          </figcaption>
+        </figure>
+
+        <figure class="step">
+          <img src="images/waterbird/04-stands.jpg" alt="Photographer mounting the curved track onto a wheeled stand" loading="lazy">
+          <figcaption>
+            <span class="step-num">04</span>
+            <h5>Mount the track on the stands</h5>
+            <p>Screw each stand into the <strong>second nut from the end</strong> of the track. The stands are on wheels, so you can spin them on. This is easier with two people.</p>
+            <button class="ts" data-t="68">Watch at 1:08</button>
+          </figcaption>
+        </figure>
+
+        <figure class="step">
+          <img src="images/waterbird/05-cables.jpg" alt="Cable plugged into the back of the controller" loading="lazy">
+          <figcaption>
+            <span class="step-num">05</span>
+            <h5>Connect cable and power</h5>
+            <ol>
+              <li><strong>Male pins</strong> of the cable go into the <strong>controller</strong>.</li>
+              <li><strong>Female end</strong> goes into the <strong>motor</strong>.</li>
+              <li>Plug the <strong>power supply into the motor</strong>, mount the camera, and power it on.</li>
+            </ol>
+            <button class="ts" data-t="95">Watch at 1:35</button>
+          </figcaption>
+        </figure>
+
+        <h4 class="phase">3 &middot; Troubleshooting</h4>
+
+        <figure class="step step-alert">
+          <img src="images/waterbird/06-joystick-swap.jpg" alt="Finger on the joystick of the controller" loading="lazy">
+          <figcaption>
+            <span class="step-num">06</span>
+            <h5>Joystick moving the wrong way?</h5>
+            <p>If pushing left sends the track right, the joystick is mirrored. <strong>Unplug the controller</strong>, then plug it back in while <strong>holding Ping Pong</strong>. The screen will read <em>"Joystick swap"</em>, and left will move the track left again.</p>
+            <button class="ts" data-t="113">Watch at 1:53</button>
+          </figcaption>
+        </figure>
+
+        <h4 class="phase">4 &middot; Angle the track for a two-shot</h4>
+
+        <figure class="step">
+          <img src="images/waterbird/07-center-arrow.jpg" alt="Arrow sticker marking the centre of the track" loading="lazy">
+          <figcaption>
+            <span class="step-num">07</span>
+            <h5>Start at the centre mark</h5>
+            <p>An <strong>arrow sticker marks the middle</strong> of the track. Use the joystick to line the lens up with the arrow, then aim the camera's crosshair at the middle of your subjects (here, the middle of the couch).</p>
+            <button class="ts" data-t="144">Watch at 2:24</button>
+          </figcaption>
+        </figure>
+
+        <figure class="step">
+          <img src="images/waterbird/08-crosshair.jpg" alt="Camera monitor showing a couch with the crosshair centred" loading="lazy">
+          <figcaption>
+            <span class="step-num">08</span>
+            <h5>Check each end of the move</h5>
+            <p>Drive the camera to the <strong>far left</strong> and check the monitor. The crosshair should still sit <strong>centred between your two subjects</strong>. Then do the same at the <strong>far right</strong>.</p>
+            <button class="ts" data-t="169">Watch at 2:49</button>
+          </figcaption>
+        </figure>
+
+        <figure class="step">
+          <img src="images/waterbird/09-adjust-track.jpg" alt="Hands releasing the brake and nudging the end of the track" loading="lazy">
+          <figcaption>
+            <span class="step-num">09</span>
+            <h5>Nudge the track until it's centred</h5>
+            <p>If an end is off, <strong>release the brake</strong> on that end and angle the track out <em>ever so slightly</em> until the crosshair is centred again.</p>
+            <p class="tip"><strong>Tip:</strong> have someone hold the middle and the other end while you adjust, so the positions you've already set don't move.</p>
+            <button class="ts" data-t="185">Watch at 3:05</button>
+          </figcaption>
+        </figure>
+
+        <h4 class="phase">5 &middot; Program the move</h4>
+
+        <figure class="step">
+          <img src="images/waterbird/10-set-points.jpg" alt="Finger pressing a button on the controller" loading="lazy">
+          <figcaption>
+            <span class="step-num">10</span>
+            <h5>Set the in and out points</h5>
+            <ol>
+              <li>Drive the camera to the <strong>far left</strong> position.</li>
+              <li><strong>Hold INIT/Stop</strong> until the light <strong>flashes red</strong>.</li>
+              <li>Drive to the <strong>far right</strong>, and hold INIT/Stop again until it goes red.</li>
+              <li>Press <strong>Ping Pong</strong>. The camera will now travel back and forth between the two points.</li>
+            </ol>
+            <button class="ts" data-t="247">Watch at 4:07</button>
+          </figcaption>
+        </figure>
+
+        <figure class="step">
+          <img src="images/waterbird/11-dials.jpg" alt="Hand turning a dial on the controller" loading="lazy">
+          <figcaption>
+            <span class="step-num">11</span>
+            <h5>Dial in pause, ramp and speed</h5>
+            <table class="settings">
+              <thead><tr><th>Dial</th><th>What it does</th><th>Starting point</th></tr></thead>
+              <tbody>
+                <tr><td>Pause</td><td>How long it waits at each end, in seconds (the same as "dwell" on other sliders). The dial is very sensitive.</td><td>~2 sec</td></tr>
+                <tr><td>Ramp</td><td>How gently it accelerates from a stop into full motion</td><td>60–70</td></tr>
+                <tr><td>Speed</td><td>Top travel speed</td><td>50–70%</td></tr>
+              </tbody>
+            </table>
+            <button class="ts" data-t="290">Watch at 4:50</button>
+          </figcaption>
+        </figure>
+
+        <h4 class="phase">6 &middot; Manual mode</h4>
+
+        <figure class="step">
+          <img src="images/waterbird/12-manual-speed.jpg" alt="Photographer adjusting speed on the controller during a move" loading="lazy">
+          <figcaption>
+            <span class="step-num">12</span>
+            <h5>Ride the speed during the interview</h5>
+            <p>You can change the speed <strong>mid-move</strong>, even in Ping Pong. If you can tell a subject is about to say something important, slow the move down. Bring the speed back up once they finish the sentence.</p>
+            <button class="ts" data-t="339">Watch at 5:39</button>
+          </figcaption>
+        </figure>
+
+        <h4 class="phase">7 &middot; In the field</h4>
+
+        <div class="pair">
+          <figure>
+            <img src="images/waterbird/13-live-setup.jpg" alt="Crew setting up the Waterbird slider on location" loading="lazy">
+            <figcaption>Live setup on location</figcaption>
+          </figure>
+          <figure>
+            <img src="images/waterbird/14-final-shot.jpg" alt="Finished interview shot of a group seated by a waterfront window" loading="lazy">
+            <figcaption>The finished shot</figcaption>
+          </figure>
+        </div>
+
+        <aside class="callout">
+          <h5>Quick checklist</h5>
+          <ul>
+            <li>Brakes <strong>up</strong> (unlocked) before the carriage moves.</li>
+            <li>Stands on the second nut from each end.</li>
+            <li>Cable: male end to controller, female end to motor; power into the motor.</li>
+            <li>Crosshair centred between subjects at left, middle <em>and</em> right.</li>
+            <li>Hold INIT/Stop until red at each end, then press Ping Pong.</li>
+            <li>Pause ~2 sec, ramp 60–70, speed 50–70%.</li>
+            <li>Consider a bubble level on the camera and a level on the track.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="transcript">
+        <details>
+          <summary>
+            <span class="section-title">Full transcript</span>
+            <span class="summary-hint">Click any timestamp to jump the video there</span>
+          </summary>
+          <div class="tx-body">
+        <h4 class="tx-chapter">Intro</h4>
+        <div class="tx-group">
+          <p><button class="ts" data-t="0">0:00</button> Today we&#x27;ll take a look at the Waterbird slider.</p>
+          <p><button class="ts" data-t="1">0:01</button> It&#x27;s a good slider that has an arc to it,</p>
+          <p><button class="ts" data-t="3">0:03</button> so you can basically cut any angle</p>
+          <p><button class="ts" data-t="5">0:05</button> or do a simple two shot interview.</p>
+          <p><button class="ts" data-t="8">0:08</button> And we&#x27;ll go through the controller</p>
+          <p><button class="ts" data-t="10">0:10</button> and troubleshoot any problems.</p>
+          <p><button class="ts" data-t="12">0:12</button> Let&#x27;s dive in.</p>
+          <p><button class="ts" data-t="13">0:13</button> All right, so first let&#x27;s go through the parts.</p>
+        </div>
+        <h4 class="tx-chapter">Parts list</h4>
+        <div class="tx-group">
+          <p><button class="ts" data-t="14">0:14</button> We have the track itself.</p>
+          <p><button class="ts" data-t="16">0:16</button> There is a ball head that we&#x27;ll use to put the camera on</p>
+          <p><button class="ts" data-t="19">0:19</button> and we can attach it to the actual motor.</p>
+          <p><button class="ts" data-t="22">0:22</button> Two stands I think is enough for it right now.</p>
+          <p><button class="ts" data-t="24">0:24</button> Maybe we will add three or change the stands later on</p>
+          <p><button class="ts" data-t="27">0:27</button> to some of the bigger heavy duty stands like that one.</p>
+          <p><button class="ts" data-t="30">0:30</button> You have the remote control.</p>
+          <p><button class="ts" data-t="31">0:31</button> This is a joystick that you can input the track positions</p>
+          <p><button class="ts" data-t="34">0:34</button> and also manually move the track with a joystick</p>
+          <p><button class="ts" data-t="37">0:37</button> and adjust the speed and the ramp in time</p>
+          <p><button class="ts" data-t="40">0:40</button> while it&#x27;s moving.</p>
+          <p><button class="ts" data-t="42">0:42</button> This cable is what&#x27;s gonna connect the actual motor</p>
+          <p><button class="ts" data-t="45">0:45</button> to the joystick to communicate and then the power source.</p>
+          <p><button class="ts" data-t="48">0:48</button> So we&#x27;ll set all that up right now.</p>
+          <p><button class="ts" data-t="50">0:50</button> All right, so now to take out the slider.</p>
+          <p><button class="ts" data-t="52">0:52</button> The most important thing while it&#x27;s moving around,</p>
+        </div>
+        <h4 class="tx-chapter">Slider setup</h4>
+        <div class="tx-group">
+          <p><button class="ts" data-t="54">0:54</button> these brakes should be off</p>
+          <p><button class="ts" data-t="57">0:57</button> just for the longevity of the slider itself.</p>
+          <p><button class="ts" data-t="59">0:59</button> These brakes when they&#x27;re down,</p>
+          <p><button class="ts" data-t="61">1:01</button> that means it&#x27;s locked in.</p>
+          <p><button class="ts" data-t="62">1:02</button> When they&#x27;re pointed up, that means it&#x27;s unlocked</p>
+          <p><button class="ts" data-t="64">1:04</button> and we can move that how we want.</p>
+          <p><button class="ts" data-t="68">1:08</button> All right, so now we&#x27;ll attach the track to the stand.</p>
+          <p><button class="ts" data-t="71">1:11</button> It&#x27;s probably easy if you have two people for this</p>
+          <p><button class="ts" data-t="73">1:13</button> but for this purpose, we&#x27;ll just put the stand on it</p>
+          <p><button class="ts" data-t="76">1:16</button> and I&#x27;m connecting it to the second nut from the end.</p>
+          <p><button class="ts" data-t="79">1:19</button> And luckily these have wheels</p>
+          <p><button class="ts" data-t="80">1:20</button> so we can just turn that in.</p>
+          <p><button class="ts" data-t="83">1:23</button> All right, and then we&#x27;ll do the other side.</p>
+          <p><button class="ts" data-t="93">1:33</button> Okay, so that&#x27;s in.</p>
+          <p><button class="ts" data-t="95">1:35</button> The male pins of the cable go into the controller.</p>
+          <p><button class="ts" data-t="101">1:41</button> The female of the cable goes into the motor itself.</p>
+          <p><button class="ts" data-t="105">1:45</button> Finally, we&#x27;ll plug the power source into the motor,</p>
+          <p><button class="ts" data-t="109">1:49</button> the camera on and we&#x27;re ready to get started.</p>
+        </div>
+        <h4 class="tx-chapter">Troubleshooting</h4>
+        <div class="tx-group">
+          <p><button class="ts" data-t="113">1:53</button> Now, one thing I wanna show is that sometimes</p>
+          <p><button class="ts" data-t="116">1:56</button> the joystick was going in a mirrored direction.</p>
+          <p><button class="ts" data-t="118">1:58</button> So if that ever happens to you, unplug it.</p>
+          <p><button class="ts" data-t="122">2:02</button> And then when you plug it back in, hold down ping pong,</p>
+          <p><button class="ts" data-t="127">2:07</button> it&#x27;s gonna say joystick swap</p>
+          <p><button class="ts" data-t="129">2:09</button> and now we&#x27;re going the right way again.</p>
+          <p><button class="ts" data-t="131">2:11</button> Hitting left, the track is moving left.</p>
+        </div>
+        <h4 class="tx-chapter">Angle the track</h4>
+        <div class="tx-group">
+          <p><button class="ts" data-t="135">2:15</button> All right, so now we&#x27;re gonna talk about</p>
+          <p><button class="ts" data-t="136">2:16</button> how to actually move the track</p>
+          <p><button class="ts" data-t="137">2:17</button> and where it should line up</p>
+          <p><button class="ts" data-t="138">2:18</button> so that it actually works for an interview angle.</p>
+          <p><button class="ts" data-t="140">2:20</button> For example, if there are two people</p>
+          <p><button class="ts" data-t="142">2:22</button> sitting on the couch right here.</p>
+          <p><button class="ts" data-t="144">2:24</button> So the first thing I like to do is to set up the middle.</p>
+          <p><button class="ts" data-t="146">2:26</button> We&#x27;ve put an arrow here to designate</p>
+          <p><button class="ts" data-t="148">2:28</button> that this is the middle.</p>
+          <p><button class="ts" data-t="149">2:29</button> So we&#x27;re gonna try to line up the lens</p>
+          <p><button class="ts" data-t="150">2:30</button> with this middle arrow.</p>
+          <p><button class="ts" data-t="152">2:32</button> So I&#x27;m gonna move the joystick to the left to line up.</p>
+          <p><button class="ts" data-t="157">2:37</button> Our camera is lined up there.</p>
+          <p><button class="ts" data-t="162">2:42</button> All right, so I&#x27;m just using the middle of the couch</p>
+          <p><button class="ts" data-t="163">2:43</button> and lining up the crosshair to middle of the couch</p>
+          <p><button class="ts" data-t="166">2:46</button> to designate that that&#x27;s the middle position.</p>
+          <p><button class="ts" data-t="169">2:49</button> And I&#x27;m gonna move the joystick to the left</p>
+          <p><button class="ts" data-t="171">2:51</button> to designate the camera to the far left position.</p>
+          <p><button class="ts" data-t="175">2:55</button> I&#x27;ll come back to the camera</p>
+          <p><button class="ts" data-t="176">2:56</button> and make sure that the crosshair</p>
+          <p><button class="ts" data-t="178">2:58</button> is centered between my two subjects.</p>
+          <p><button class="ts" data-t="181">3:01</button> It&#x27;s pretty close but we can always adjust the track</p>
+          <p><button class="ts" data-t="183">3:03</button> so we&#x27;ll do that now.</p>
+          <p><button class="ts" data-t="185">3:05</button> I&#x27;m gonna release the brake</p>
+          <p><button class="ts" data-t="186">3:06</button> and just move it back ever so slightly</p>
+          <p><button class="ts" data-t="191">3:11</button> until we&#x27;re lined up center again on the crosshair.</p>
+          <p><button class="ts" data-t="194">3:14</button> Once that&#x27;s done,</p>
+          <p><button class="ts" data-t="195">3:15</button> we&#x27;ll go to the right position we wanna be at.</p>
+          <p><button class="ts" data-t="198">3:18</button> So I&#x27;m gonna take the camera</p>
+          <p><button class="ts" data-t="199">3:19</button> all the way to the right side.</p>
+          <p><button class="ts" data-t="203">3:23</button> And now in this case,</p>
+          <p><button class="ts" data-t="204">3:24</button> the crosshair is not lined up</p>
+          <p><button class="ts" data-t="205">3:25</button> to the center of the couch or between our two subjects.</p>
+          <p><button class="ts" data-t="208">3:28</button> So we will move the right side of the track.</p>
+          <p><button class="ts" data-t="212">3:32</button> We&#x27;re gonna open up the brake of the track</p>
+          <p><button class="ts" data-t="216">3:36</button> and we&#x27;re gonna ever so slightly angle out</p>
+          <p><button class="ts" data-t="221">3:41</button> until we&#x27;re once again angled</p>
+          <p><button class="ts" data-t="223">3:43</button> with the crosshair in the middle.</p>
+          <p><button class="ts" data-t="225">3:45</button> Now something that I found that works</p>
+          <p><button class="ts" data-t="228">3:48</button> is having somebody hold down the middle section</p>
+          <p><button class="ts" data-t="230">3:50</button> or the left section while you&#x27;re adjusting the track</p>
+          <p><button class="ts" data-t="235">3:55</button> so that the first two positions don&#x27;t move</p>
+          <p><button class="ts" data-t="237">3:57</button> and you&#x27;re only changing the third track to fix the angle.</p>
+        </div>
+        <h4 class="tx-chapter">Set in/out points</h4>
+        <div class="tx-group">
+          <p><button class="ts" data-t="241">4:01</button> All right, now let&#x27;s talk about</p>
+          <p><button class="ts" data-t="243">4:03</button> how to actually make the track move</p>
+          <p><button class="ts" data-t="244">4:04</button> and how we can use the controller</p>
+          <p><button class="ts" data-t="246">4:06</button> to make the movement we want.</p>
+          <p><button class="ts" data-t="248">4:08</button> All right, so I like to start on the left.</p>
+          <p><button class="ts" data-t="249">4:09</button> So I&#x27;m bringing the camera all the way to the left.</p>
+          <p><button class="ts" data-t="252">4:12</button> And then once it&#x27;s in the position we want,</p>
+          <p><button class="ts" data-t="254">4:14</button> that&#x27;s the farthest left.</p>
+          <p><button class="ts" data-t="255">4:15</button> I&#x27;m gonna hold down this button that says INIT,</p>
+          <p><button class="ts" data-t="257">4:17</button> which probably means initialize and stop.</p>
+          <p><button class="ts" data-t="260">4:20</button> So hold that down until it blinks.</p>
+          <p><button class="ts" data-t="263">4:23</button> We got a flashing red.</p>
+          <p><button class="ts" data-t="265">4:25</button> Now I&#x27;m gonna take all the way to my right.</p>
+          <p><button class="ts" data-t="268">4:28</button> We see the camera moving right.</p>
+          <p><button class="ts" data-t="273">4:33</button> And then I&#x27;m gonna hit initialize and stop again.</p>
+          <p><button class="ts" data-t="277">4:37</button> But I&#x27;m gonna hold it down each time until it goes red.</p>
+          <p><button class="ts" data-t="279">4:39</button> Now it&#x27;s red.</p>
+          <p><button class="ts" data-t="280">4:40</button> Okay, once that&#x27;s red,</p>
+          <p><button class="ts" data-t="282">4:42</button> the far left button says ping pong.</p>
+          <p><button class="ts" data-t="283">4:43</button> That&#x27;ll make it go back and forth.</p>
+          <p><button class="ts" data-t="285">4:45</button> So we&#x27;re gonna hit ping pong.</p>
+          <p><button class="ts" data-t="287">4:47</button> And now we&#x27;re gonna start moving back and forth.</p>
+          <p><button class="ts" data-t="290">4:50</button> Now there&#x27;s three dials that work for us in here.</p>
+          <p><button class="ts" data-t="294">4:54</button> One is pause.</p>
+          <p><button class="ts" data-t="295">4:55</button> That&#x27;s the same as the mighty slider, which is dwell.</p>
+          <p><button class="ts" data-t="298">4:58</button> And that&#x27;s in seconds.</p>
+          <p><button class="ts" data-t="299">4:59</button> So we can do it for one or two seconds.</p>
+          <p><button class="ts" data-t="302">5:02</button> Now let&#x27;s reach the end.</p>
+          <p><button class="ts" data-t="303">5:03</button> It&#x27;s gonna stop for four seconds</p>
+          <p><button class="ts" data-t="304">5:04</button> so that went to four, one, two, three, four.</p>
+          <p><button class="ts" data-t="306">5:06</button> It&#x27;ll probably start now.</p>
+          <p><button class="ts" data-t="308">5:08</button> Okay, I&#x27;ll put it back to two seconds.</p>
+          <p><button class="ts" data-t="310">5:10</button> That&#x27;s at two seconds now.</p>
+          <p><button class="ts" data-t="314">5:14</button> This dial is very sensitive.</p>
+          <p><button class="ts" data-t="317">5:17</button> And then we have a speed and a ramp.</p>
+          <p><button class="ts" data-t="319">5:19</button> Ramp is how the acceleration is gonna go</p>
+          <p><button class="ts" data-t="322">5:22</button> from its stop position into its full motion.</p>
+          <p><button class="ts" data-t="326">5:26</button> I found that about 65, 60, 70 range</p>
+          <p><button class="ts" data-t="330">5:30</button> works pretty good for our situation</p>
+          <p><button class="ts" data-t="332">5:32</button> and the speed is on full right now.</p>
+          <p><button class="ts" data-t="334">5:34</button> And once again, something like 50 to 70%</p>
+          <p><button class="ts" data-t="337">5:37</button> is probably where we wanna be for our purposes.</p>
+          <p><button class="ts" data-t="339">5:39</button> One thing I really like about the slider</p>
+          <p><button class="ts" data-t="340">5:40</button> is the ability to control the speed of the movement</p>
+          <p><button class="ts" data-t="344">5:44</button> both manually or when we&#x27;ve set up points</p>
+          <p><button class="ts" data-t="347">5:47</button> and we&#x27;re already going ping pong in the middle of the move,</p>
+        </div>
+        <h4 class="tx-chapter">Manual mode</h4>
+        <div class="tx-group">
+          <p><button class="ts" data-t="349">5:49</button> right now I&#x27;m gonna slow it down</p>
+          <p><button class="ts" data-t="352">5:52</button> and it&#x27;s come to a stop.</p>
+          <p><button class="ts" data-t="354">5:54</button> They come the other way.</p>
+          <p><button class="ts" data-t="356">5:56</button> I can gradually increase the speed and here it comes.</p>
+          <p><button class="ts" data-t="362">6:02</button> And I can slow it down.</p>
+          <p><button class="ts" data-t="363">6:03</button> Maybe if something, if I sense</p>
+          <p><button class="ts" data-t="366">6:06</button> that the subject is gonna say something important,</p>
+          <p><button class="ts" data-t="369">6:09</button> I can slow it down and start to increase the speed</p>
+          <p><button class="ts" data-t="373">6:13</button> and wait for them to finish a sentence</p>
+          <p><button class="ts" data-t="375">6:15</button> and then slow it back down.</p>
+          <p><button class="ts" data-t="377">6:17</button> So that&#x27;s quite nice for manual mode.</p>
+          <p><button class="ts" data-t="379">6:19</button> One more thing we may wanna look at</p>
+          <p><button class="ts" data-t="380">6:20</button> is a bubble level for the camera</p>
+          <p><button class="ts" data-t="383">6:23</button> and a straight level just to make sure</p>
+          <p><button class="ts" data-t="385">6:25</button> the track is always in the right position</p>
+          <p><button class="ts" data-t="387">6:27</button> at every starting and stopping motion of the move.</p>
+        </div>
+        <h4 class="tx-chapter">Outro</h4>
+        <div class="tx-group">
+          <p><button class="ts" data-t="390">6:30</button> All right, so that&#x27;s a great use case for the slider.</p>
+          <p><button class="ts" data-t="392">6:32</button> We may wanna look at getting different stands</p>
+          <p><button class="ts" data-t="394">6:34</button> or other things, but so far</p>
+          <p><button class="ts" data-t="397">6:37</button> I think it&#x27;s working pretty well</p>
+          <p><button class="ts" data-t="397">6:37</button> and I see much shake and jitter</p>
+          <p><button class="ts" data-t="398">6:38</button> once it&#x27;s actually moving on the track.</p>
+          <p><button class="ts" data-t="401">6:41</button> I love the option to have the joystick</p>
+          <p><button class="ts" data-t="402">6:42</button> and the manual control</p>
+          <p><button class="ts" data-t="404">6:44</button> and let me know what you guys think.</p>
+        </div>
+        <h4 class="tx-chapter">Live setup</h4>
+        <div class="tx-group">
+          <p><button class="ts" data-t="406">6:46</button> All right, so now we&#x27;re gonna do a live setup</p>
+          <p><button class="ts" data-t="408">6:48</button> of the slider and we&#x27;re gonna show the shots</p>
+          <p><button class="ts" data-t="410">6:50</button> of what it looks like in this room.</p>
+        </div>
+          </div>
+        </details>
+      </section>
     </article>
   </main>
 
@@ -69,6 +471,17 @@
       const open = nav.classList.toggle('open');
       toggle.classList.toggle('open', open);
       toggle.setAttribute('aria-expanded', open);
+    });
+    // Jump the embedded video to a timestamp
+    const yt = document.getElementById('yt');
+    const ytCmd = (func, args = []) =>
+      yt.contentWindow.postMessage(JSON.stringify({ event: 'command', func, args }), '*');
+    document.querySelectorAll('.ts').forEach(btn => {
+      btn.addEventListener('click', () => {
+        ytCmd('seekTo', [Number(btn.dataset.t), true]);
+        ytCmd('playVideo');
+        yt.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
     });
     window.addEventListener('scroll', () => {
       document.querySelector('.site-header').classList.toggle('scrolled', window.scrollY > 8);
