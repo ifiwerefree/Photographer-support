@@ -440,5 +440,7 @@ a { color: inherit; text-decoration: none; }
   .content { padding: 28px 16px 80px; }
   .site-nav a { padding: 16px; }
   .callout { padding: 22px 20px; }
+  .post-title + .byline { margin: -6px 0 0; }
+  .byline + .post-lede { margin-top: 18px; }
   .settings td:last-child { white-space: normal; }
 }
