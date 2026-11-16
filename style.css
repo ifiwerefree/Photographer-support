@@ -352,55 +352,6 @@ a { color: inherit; text-decoration: none; }
   color: #374151;
 }
 
-/* ---------- Transcript ---------- */
-.transcript {
-  margin-top: 72px;
-  border-top: 1px solid var(--line);
-}
-.transcript summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 28px 0;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.transcript summary::-webkit-details-marker { display: none; }
-.transcript summary .section-title::after {
-  content: "+";
-  margin-left: 12px;
-  font-weight: 300;
-  color: var(--muted);
-}
-.transcript details[open] summary .section-title::after { content: "\2013"; }
-.summary-hint { font-size: 14px; color: var(--muted); }
-.tx-body { padding-bottom: 24px; }
-.tx-chapter {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 28px 0 12px;
-}
-.tx-group p {
-  display: flex;
-  gap: 14px;
-  align-items: baseline;
-  font-size: 16px;
-  color: #374151;
-  padding: 4px 0;
-}
-.tx-group .ts {
-  flex: none;
-  min-width: 56px;
-  padding: 2px 8px;
-  font-size: 12px;
-  color: var(--muted);
-}
-
 /* ---------- Photo viewer ---------- */
 .lightbox {
   border: 0;
