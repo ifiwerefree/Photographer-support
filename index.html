@@ -452,6 +452,11 @@
     </article>
   </main>
 
+  <dialog class="lightbox" id="lightbox" aria-label="Photo">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img alt="">
+  </dialog>
+
   <script>
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.getElementById('site-nav');
@@ -471,6 +476,18 @@
         yt.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
     });
+    // Tap a guide photo to see it full size
+    const box = document.getElementById('lightbox');
+    const boxImg = box.querySelector('img');
+    document.querySelectorAll('.step img, .pair img').forEach(img => {
+      img.addEventListener('click', () => {
+        boxImg.src = img.src;
+        boxImg.alt = img.alt;
+        box.showModal();
+      });
+    });
+    box.addEventListener('click', () => box.close());
+
     window.addEventListener('scroll', () => {
       document.querySelector('.site-header').classList.toggle('scrolled', window.scrollY > 8);
     });

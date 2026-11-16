@@ -259,11 +259,14 @@ a { color: inherit; text-decoration: none; }
 .guide .section-title + .phase { margin-top: 32px; }
 .step {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 32px;
+  grid-template-columns: 220px 1fr;
+  gap: 28px;
   align-items: start;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
+.step img { cursor: zoom-in; }
+.pair { max-width: 560px; }
+.pair img { cursor: zoom-in; }
 .step img,
 .pair img {
   width: 100%;
@@ -398,6 +401,38 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
 }
 
+/* ---------- Photo viewer ---------- */
+.lightbox {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: min(1100px, 94vw);
+  margin: auto;
+}
+.lightbox::backdrop { background: rgba(255, 255, 255, 0.94); }
+.lightbox img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 86vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+.lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .nav-toggle { display: block; }
@@ -416,8 +451,22 @@ a { color: inherit; text-decoration: none; }
   .site-nav.open { max-height: 320px; }
   .site-nav a { padding: 16px 32px; border-top: 1px solid var(--line); }
   .site-nav a::after { display: none; }
-  .step { grid-template-columns: 1fr; gap: 18px; }
-  .pair { grid-template-columns: 1fr; }
+  /* Phone: small thumbnail beside the step title, text full width below */
+  .step {
+    grid-template-columns: 112px 1fr;
+    column-gap: 14px;
+    row-gap: 0;
+    align-items: center;
+  }
+  .step img { grid-row: 1 / span 2; border-radius: 8px; }
+  .step figcaption { display: contents; }
+  .step .step-num { grid-column: 2; align-self: end; margin-bottom: 2px; }
+  .step h5 { grid-column: 2; align-self: start; margin-bottom: 0; font-size: 17px; }
+  .step figcaption > *:not(.step-num):not(h5) { grid-column: 1 / -1; margin-top: 14px; }
+  .step figcaption > p + p { margin-top: 10px; }
+  .step figcaption > .ts { justify-self: start; }
+  .step-alert { border-left: 3px solid #c8102e; padding-left: 14px; }
+  .pair { gap: 12px; }
 }
 
 @media (max-width: 520px) {
