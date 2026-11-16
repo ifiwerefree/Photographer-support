@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photographer Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="Photographer Support home">
+        <img src="images/fox-news-media-logo.webp" alt="Fox News Media" class="brand-logo">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-title">Photographer Support</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html" class="active">Latest</a>
+        <a href="#">Videos</a>
+        <a href="#">Gear</a>
+        <a href="#">Resources</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">Internal &middot; For Field Photographers</p>
+    <h1>Photographer Support</h1>
+    <p class="hero-sub">Tips, training and updates for the people behind the camera.</p>
+  </section>
+
+  <main class="content">
+    <article class="post">
+      <div class="post-meta">
+        <span class="tag">Video</span>
+        <time datetime="2026-11-16">November 16, 2026</time>
+      </div>
+      <h2 class="post-title">Welcome to Photographer Support</h2>
+
+      <div class="video-frame">
+        <!-- Replace with your video, e.g.
+             <video controls src="videos/first-post.mp4"></video> -->
+        <div class="video-placeholder">
+          <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true">
+            <circle cx="28" cy="28" r="27" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M23 19l14 9-14 9z" fill="currentColor"/>
+          </svg>
+          <span>Video coming soon</span>
+        </div>
+      </div>
+
+      <p class="post-body">
+        Post description goes here.
+      </p>
+    </article>
+  </main>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('site-nav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    window.addEventListener('scroll', () => {
+      document.querySelector('.site-header').classList.toggle('scrolled', window.scrollY > 8);
+    });
+  </script>
+</body>
+</html>
